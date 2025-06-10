@@ -1,0 +1,537 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --pixel-size: 2px;
+        --grid-cell: calc(var(--pixel-size) * 16);
+    }
+}
+
+/* RESPONSIVE */
+@layer utilities {
+    @media(min-width: 300px) {
+        :root {
+            --pixel-size: 1px;
+        }
+    }
+    @media(min-width: 1100px) {
+        :root {
+            --pixel-size: 2px;
+        }
+    }
+    @media(min-width: 1900px) {
+        :root {
+            --pixel-size: 3px;
+        }
+    }
+}
+
+.france-root {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(23, 41, 88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.france-root .france-map {
+    image-rendering: pixelated;
+    background-image: url("../../public/asset/allMap/mapFrance.png");
+    background-size: 100%;
+    width: calc(35 * var(--grid-cell));
+    height: calc(16 * var(--grid-cell) + 8 * var(--pixel-size));
+    position: relative;
+}
+
+.france-root .money-displayed{
+    position: absolute;
+    top: calc(var(--pixel-size) * 291);
+    left: calc(var(--pixel-size) * 22);
+    width: calc(var(--pixel-size) * 75);
+    font-weight: bold;
+    font-size: calc(var(--pixel-size) * 10);
+    color:rgb(255, 226, 62);
+}
+.france-root .money-picture{
+    position: absolute;
+    top: calc(var(--pixel-size) * 290);
+    left: calc(var(--pixel-size) * 2);
+    width: calc(var(--pixel-size) * 17);
+    font-weight: bold;
+}
+.france-root .date{
+    position: absolute;
+    top: calc(var(--pixel-size) * 270);
+    left: calc(var(--pixel-size) * 2);
+    width: calc(var(--pixel-size) * 200);
+    font-weight: bold;
+    font-size: calc(var(--pixel-size) * 10);
+    color: #b1fc04;
+}
+
+/* BUTTON */
+.france-root .map-button{
+    position: absolute;
+    bottom: calc(var(--pixel-size) * 10);
+    right: calc(var(--pixel-size) * 5);
+    width: calc(var(--pixel-size) * 80);
+    height: calc(var(--pixel-size) * 20);
+    border: gray 2px solid;
+    background-color: antiquewhite;
+    border-radius: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(var(--pixel-size) * 10);
+}
+
+.france-root .foto-button{
+    position: absolute;
+    bottom: calc(var(--pixel-size) * 130);
+    right: calc(var(--pixel-size) * 60);
+    width: calc(var(--pixel-size) * 70);
+    height: calc(var(--pixel-size) * 20);
+    border: gray 2px solid;
+    background-color: antiquewhite;
+    font-weight: bolder;
+    border-radius: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(var(--pixel-size) * 10);
+}
+
+.france-root .mandi-button{
+    position: absolute;
+    bottom: calc(var(--pixel-size) * 130);
+    right: calc(var(--pixel-size) * 210);
+    width: calc(var(--pixel-size) * 60);
+    height: calc(var(--pixel-size) * 20);
+    border: gray 2px solid;
+    background-color: antiquewhite;
+    font-weight: bolder;
+    border-radius: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(var(--pixel-size) * 10);
+}
+
+.france-root .makan-button{
+    position: absolute;
+    bottom: calc(var(--pixel-size) * 130);
+    right: calc(var(--pixel-size) * 430);
+    width: calc(var(--pixel-size) * 60);
+    height: calc(var(--pixel-size) * 20);
+    border: gray 2px solid;
+    background-color: antiquewhite;
+    font-weight: bolder;
+    border-radius: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(var(--pixel-size) * 10);
+}
+
+
+.france-root .jalan-button{
+    position: absolute;
+    bottom: calc(var(--pixel-size) * 280);
+    right: calc(var(--pixel-size) * 515);
+    width: calc(var(--pixel-size) * 60);
+    height: calc(var(--pixel-size) * 20);
+    border: gray 2px solid;
+    background-color: antiquewhite;
+    font-weight: bolder;
+    border-radius: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(var(--pixel-size) * 10);
+}
+
+/* BAR */
+.france-root #bath {
+    position: absolute;
+    top: calc(var(--pixel-size) * 275);
+    left: calc(var(--pixel-size) * 527);
+    width: calc(var(--pixel-size) * 28);
+    height: calc(var(--pixel-size) * 7);
+    background-color:rgb(73, 39, 39);
+    border: 1px solid #ccc;
+}
+.france-root .bath-picture{
+    position: absolute;
+    top: calc(var(--pixel-size) * 274);
+    left: calc(var(--pixel-size) * 515);
+    width: calc(var(--pixel-size) * 10);
+    font-weight: bold;
+}
+
+.france-root #hunger {
+    position: absolute;
+    top: calc(var(--pixel-size) * 275);
+    left: calc(var(--pixel-size) * 480);
+    width: calc(var(--pixel-size) * 28);
+    height: calc(var(--pixel-size) * 7);
+    background-color:rgb(73, 39, 39);
+    border: 1px solid #ccc;
+}
+.france-root .hunger-picture{
+    position: absolute;
+    top: calc(var(--pixel-size) * 271);
+    left: calc(var(--pixel-size) * 465);
+    width: calc(var(--pixel-size) * 15);
+    font-weight: bold;
+}
+
+.france-root #sleeps {
+    position: absolute;
+    top: calc(var(--pixel-size) * 275);
+    left: calc(var(--pixel-size) * 432);
+    width: calc(var(--pixel-size) * 28);
+    height: calc(var(--pixel-size) * 7);
+    background-color:rgb(73, 39, 39);
+    border: 1px solid #ccc;
+}
+.france-root .sleeps-picture{
+    position: absolute;
+    top: calc(var(--pixel-size) * 274);
+    left: calc(var(--pixel-size) * 420);
+    width: calc(var(--pixel-size) * 10);
+    font-weight: bold;
+}
+
+.france-root #happy {
+    position: absolute;
+    top: calc(var(--pixel-size) * 275);
+    left: calc(var(--pixel-size) * 386);
+    width: calc(var(--pixel-size) * 28);
+    height: calc(var(--pixel-size) * 7);
+    background-color:rgb(73, 39, 39);
+    border: 1px solid #ccc;
+}
+.france-root .happy-picture{
+    position: absolute;
+    top: calc(var(--pixel-size) * 274);
+    left: calc(var(--pixel-size) * 371);
+    width: calc(var(--pixel-size) * 10);
+    font-weight: bold;
+}
+.france-root #health {
+    position: absolute;
+    top: calc(var(--pixel-size) * 320);
+    left: calc(var(--pixel-size) * 440);
+    width: calc(var(--pixel-size) * 100);
+    height: calc(var(--pixel-size) * 8);
+    background-color:rgb(73, 39, 39);
+    border: 1px solid #ccc;
+}
+.france-root .health-picture{
+    position: absolute;
+    top: calc(var(--pixel-size) * 319);
+    left: calc(var(--pixel-size) * 425);
+    width: calc(var(--pixel-size) * 10);
+    font-weight: bold;
+}
+
+/* Makan */
+.france-root .france-makan-options {
+    top: calc(var(--pixel-size) * 70); 
+    left: calc(var(--pixel-size) * 180);
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(4, 32, 54);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.france-root .france-makan-options.hidden {
+    display: none;
+}
+.france-root .france-makan-options button {
+    padding: 10px;
+    margin: 5px 0;
+    background-color:rgb(235, 234, 180);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.france-root .france-makan-options button:hover {
+    background-color:rgb(235, 234, 180);
+    background-color:rgb(212, 173, 64);
+}
+
+/* QUEST */
+.france-root #quest-display {
+    top: calc(var(--pixel-size) * 120); 
+    left: calc(var(--pixel-size) * -110);
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(195, 229, 245);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Pixel art */
+.france-root .pixel-art {
+    image-rendering: pixelated;
+}
+
+/* Game over image */
+.france-root .game-over-image {
+    position: absolute;
+    width: calc(25 * var(--grid-cell));
+    transition: transform 1s ease-out, opacity 1.5s ease-in-out;
+    opacity: 0;
+    z-index: 1000;
+}
+.france-root .game-over-image.show {
+    transform: translate(5%, 0%) scale(1); 
+    opacity: 1;
+}
+
+/* Black screen */
+.france-root .black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+    z-index: 1000;
+}
+.france-root .black-screen.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Info quest & icon */
+.france-root .info-quest {
+    font-size: 14px;
+    color: #888;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.france-root .info-quest:hover::after {
+    content: attr(data-info);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.france-root .info-icon {
+    font-size: 14px;
+    color: #888;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.france-root .info-icon:hover::after {
+    content: attr(data-cost);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Camera, character, shadow, etc */
+.france-root .camera {
+    width: calc(var(--pixel-size)*160);
+    height: calc(var(--pixel-size)*144);
+}
+.france-root .character {
+    width: calc(var(--grid-cell)* 2);
+    height: calc(var(--grid-cell)* 2);
+    position: absolute;
+    overflow: hidden;
+}
+.france-root .shadow {
+    width: calc(var(--grid-cell)* 2);
+    height: calc(var(--grid-cell)* 2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../../public/asset/character/shadow.webp") no-repeat no-repeat;
+    background-size: 100%;
+}
+.france-root .character-name {
+    position: fixed;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calc(var(--pixel-size) * 18);
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.france-root .character_spritesheet {
+    position: absolute;
+    background-size: 100%;
+    width: calc(var(--grid-cell)* 8);
+    height: calc(var(--grid-cell)* 8);
+}
+.france-root .character[facing="right"] .character_spritesheet {
+    background-position-y: calc(var(--pixel-size) * -32);
+}
+.france-root .character[facing="up"] .character_spritesheet {
+    background-position-y: calc(var(--pixel-size) * -64);
+}
+.france-root .character[facing="left"] .character_spritesheet {
+    background-position-y: calc(var(--pixel-size) * -96);
+}
+.france-root .character[walking="true"] .character_spritesheet {
+    animation: walkAnimation 0.6s steps(4) infinite;
+}
+@keyframes walkAnimation {
+    from {
+        transform: translate3d(0%, 0%, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0%, 0);
+    }
+}
+
+/* Dpad & headline */
+.france-root .dpad {
+    position: absolute;
+    margin-bottom: 120px;
+    margin-right: 100px;
+    right: calc(var(--pixel-size) * 2);
+    bottom: calc(var(--pixel-size) * 2);
+    width: calc(var(--pixel-size) * 37);
+    height: calc(var(--pixel-size) * 38);
+    user-select: none;
+}
+.france-root .dpad-button svg {
+    display: block;
+    height: calc(var(--pixel-size) * 13);
+}
+.france-root .dpad-up {
+    position: absolute;
+    left: calc(var(--pixel-size) * 12);
+    top: 0;
+}
+.france-root .dpad-down {
+    position: absolute;
+    bottom: var(--pixel-size);
+    left: calc(var(--pixel-size) * 12);
+}
+.france-root .dpad-left {
+    position: absolute;
+    top: calc(var(--pixel-size) * 12);
+    left: 0;
+}
+.france-root .dpad-right {
+    position: absolute;
+    top: calc(var(--pixel-size) * 12);
+    right: 0;
+}
+.france-root .headline {
+    position: absolute;
+    top: calc(var(--pixel-size) * 2);
+    right: calc(var(--pixel-size) * 2);
+    width: calc(var(--pixel-size) * 75);
+}
+
+
+.gameover-modal {
+    position: fixed;
+    inset: 0;
+    background: #fff !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.gameover-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    padding: 0 5vw;
+    box-sizing: border-box;
+}
+.gameover-content img {
+    width: 80vw;
+    max-width: 600px;
+    min-width: 180px;
+    height: auto;
+    opacity: 0;
+    animation: fadeInGameOver 1.5s forwards;
+    box-shadow: 0 0 40px 10px #000;
+}
+@media (min-width: 600px) {
+    .gameover-content img {
+        width: 60vw;
+        max-width: 700px;
+    }
+}
+@media (min-width: 900px) {
+    .gameover-content img {
+        width: 40vw;
+        max-width: 800px;
+    }
+}
+@media (max-width: 400px) {
+    .gameover-content img {
+        width: 95vw;
+        min-width: 120px;
+    }
+    .gameover-content {
+        padding: 0 2vw;
+    }
+}
+@keyframes fadeInGameOver {
+    from { opacity: 0; transform: scale(0.8);}
+    to   { opacity: 1; transform: scale(1);}
+}
+.gameover-content button {
+    margin-top: 24px;
+    padding: 12px 8vw;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+    color: #222;
+    font-weight: bold;
+    transition: background 0.2s;
+    min-width: 120px;
+    max-width: 90vw;
+    margin-bottom: 10px;
+}
+.gameover-content button:hover {
+    background: #eee;
+}
+.gameover-content .gameover-reason {
+    color: #000;
+    font-size: 4vw;
+    max-width: 90vw;
+    margin: 18px 0 10px 0;
+    text-align: center;
+    word-break: break-word;
+}
+@media (min-width: 600px) {
+    .gameover-content .gameover-reason {
+        font-size: 1.5rem;
+    }
+}
